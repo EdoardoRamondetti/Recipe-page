@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    height: 1700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 54%, 90%);
+}
+
+main{
+    border-radius: 20px;
+    max-width: 650px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 35px;
+
+}
+
+.img__container{
+    display: flex;
+    justify-content: center;
+}
+
+.img__container img{
+    border-radius: 10px;
+    width: 650px;
+}
+
+.img__container + h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main p{
+    margin-bottom: 20px;
+}
+
+.preparation{
+    border-radius: 10px;
+    background-color: hsl(330, 100%, 98%);
+    margin-bottom: 20px;
+}
+
+.preparation h4{
+    padding: 20px;
+    padding-bottom: 12px;
+    color:  hsl(332, 51%, 32%);
+}
+
+.preparation ul{
+    padding-left: 42px;
+    padding-bottom: 15px;
+}
+
+.preparation li{
+    margin-bottom: 8px;
+    padding-left: 15px;
+}
+
+.preparation span{
+    font-weight: 600;
+}
+
+.ingredients h2{
+    margin-bottom: 18px;
+    color: hsl(14, 45%, 36%);
+}
+
+.ingredients ul{
+    padding-left: 22px;
+}
+
+.ingredients li{
+    margin-bottom: 8px;
+    padding-left: 15px;
+}
+
+.ingredients{
+    margin-bottom: 26px;
+}
+
+hr{
+    border: 1px solid hsl(30, 54%, 90%);
+    margin-bottom: 26px;
+}
+
+.instructions h2{
+    margin-bottom: 18px;
+    color: hsl(14, 45%, 36%);
+}
+
+.instructions ol{
+    padding-left: 22px;
+    list-style: none;
+    counter-reset: list-counter;
+}
+
+.instructions li{
+    margin-bottom: 8px;
+    counter-increment: list-counter;
+    position: relative;
+    padding-left: 15px;
+}
+
+ol li::before {
+    content: counter(list-counter) ". ";
+    color: hsl(332, 51%, 32%);; 
+    position: absolute; 
+    left: -15px;
+    top: 0;
+}
+
+.instructions{
+    margin-bottom: 26px;
+}
+
+.instructions span{
+    font-weight: 700;
+}
+
+.nutrition ul{
+    list-style: none;
+}
+
+.nutrition h2{
+    margin-bottom: 18px;
+    color: hsl(14, 45%, 36%);
+}
+
+.nutrition hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nutrition li{
+    padding-left: 35px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 22px 20px 22px 20px 22px 20px ;
+}
+
+.grid span:nth-of-type(1){
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.grid span:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.grid span:nth-of-type(3){
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.grid span:nth-of-type(4){
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.grid span:nth-of-type(5){
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.grid span:nth-of-type(6){
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.grid span:nth-of-type(7){
+    grid-column: 1;
+    grid-row: 7;
+}
+
+.grid span:nth-of-type(8){
+    grid-column: 2;
+    grid-row: 7;
+}
+
+.grid span:nth-of-type(even){
+    font-weight: 600;
+    color: hsl(332, 51%, 32%);
+}
+
+.grid span:nth-of-type(odd){
+    margin-left: 29px;
+}
+
+.grid hr:nth-of-type(1){
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+
+.grid hr:nth-of-type(2){
+    grid-column: 1 / 3;
+    grid-row: 4;
+}
+
+.grid hr:nth-of-type(3){
+    grid-column: 1 / 3;
+    grid-row: 6;
+}
+
+@media (max-width: 575px) {
+
+    body{
+        font-size: 16pt;
+        height: 2340px;
+    }
+    main{
+        border-radius: 0px;
+        width: max-content;
+        padding: 0;
+        max-width: max-content;
+    }
+
+    .img__container img{
+        border-radius: 0px;
+        background-position: center;
+        width: 375px;
+    }
+
+    .img__container + h1{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 30pt;
+    }
+
+    main p{
+        font-size: 15pt;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .preparation{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .ingredients{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .instructions{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .nutrition{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (screen) {
+    
+}
